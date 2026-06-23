@@ -1,0 +1,7 @@
+attributes
+autoSizePadding: attrValue 
+"'The amount of padding, in pixels, to exceed before the auto-size behavior will occur.
+type: number
+default: 0'"
+
+self attributeAt: #'auto-size-padding' put: attrValue

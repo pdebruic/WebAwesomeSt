@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "WebAwesomeBrush",
+	"category" : "WebAwesome",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WScroller",
+	"type" : "normal"
+}

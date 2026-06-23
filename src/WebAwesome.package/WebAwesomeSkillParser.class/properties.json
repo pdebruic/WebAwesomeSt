@@ -1,0 +1,26 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "WebAwesome",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"SeenHeadings"
+	],
+	"instvars" : [
+		"parsed",
+		"slots",
+		"attributes",
+		"properties",
+		"title",
+		"tag",
+		"events",
+		"cssParts",
+		"cssCustomProperties",
+		"methods",
+		"customStates",
+		"comment"
+	],
+	"name" : "WebAwesomeSkillParser",
+	"type" : "normal"
+}

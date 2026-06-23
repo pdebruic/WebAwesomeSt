@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "WATagBrush",
+	"category" : "WebAwesome",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"slots"
+	],
+	"name" : "WebAwesomeBrush",
+	"type" : "normal"
+}

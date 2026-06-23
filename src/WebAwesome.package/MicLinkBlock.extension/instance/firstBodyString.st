@@ -1,0 +1,3 @@
+*WebAwesome
+firstBodyString
+	^self plainText 

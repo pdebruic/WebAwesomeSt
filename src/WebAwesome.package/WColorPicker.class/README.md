@@ -1,0 +1,150 @@
+Full documentation: https://webawesome.com/docs/components/color-picker
+
+<wa-color-picker>
+
+Stable Forms Since 2.0
+
+Color pickers let users choose a color from a visual palette or by entering a value. They support HEX, RGB, HSL, and HSV formats with optional alpha channel and swatch presets.
+
+<wa-color-picker label="Select a color"></wa-color-picker>
+
+
+This component works with standard <form> elements. Please refer to the section on form controls to learn more about form submission and client-side validation.
+
+Examples
+Link to This Section
+
+Initial Value
+Link to This Section
+
+Use the value attribute to set an initial value for the color picker.
+
+<wa-color-picker value="#4a90e2" label="Select a color"></wa-color-picker>
+
+
+Opacity
+Link to This Section
+
+Use the opacity attribute to enable the opacity slider. When this is enabled, the value will be displayed as HEXA, RGBA, HSLA, or HSVA based on format.
+
+<wa-color-picker value="#f5a623ff" opacity label="Select a color"></wa-color-picker>
+
+
+Formats
+Link to This Section
+
+Set the color picker's format with the format attribute. Valid options include hex, rgb, hsl, and hsv. Note that the color picker's input will accept any parsable format (including CSS color names) regardless of this option.
+
+To prevent users from toggling the format themselves, add the without-format-toggle attribute.
+
+<div class="wa-grid" style="--min-column-size: 12ch;">
+  <wa-color-picker format="hex" value="#4a90e2" label="Pick a hex color"></wa-color-picker>
+  <wa-color-picker format="rgb" value="rgb(80, 227, 194)" label="Pick an RGB color"></wa-color-picker>
+  <wa-color-picker format="hsl" value="hsl(290, 87%, 47%)" label="Pick an HSL color"></wa-color-picker>
+  <wa-color-picker format="hsv" value="hsv(55, 89%, 97%)" label="Pick an HSV color"></wa-color-picker>
+</div>
+
+
+Swatches
+Link to This Section
+
+Use the swatches attribute to add convenient presets to the color picker. Any format the color picker can parse is acceptable (including CSS color names), but each value must be separated by a semicolon (;). Alternatively, you can pass an array of color values to this property using JavaScript.
+
+<wa-color-picker
+  label="Select a color"
+  swatches="
+    #d0021b; #f5a623; #f8e71c; #8b572a; #7ed321; #417505; #bd10e0; #9013fe;
+    #4a90e2; #50e3c2; #b8e986; #000; #444; #888; #ccc; #fff;
+  "
+></wa-color-picker>
+
+
+You can also pass an array of objects with color and label properties using JavaScript. When labels are provided, they will be used as the accessible name for each swatch instead of the raw color value.
+
+<wa-color-picker id="labeled-swatches" label="Select a color"></wa-color-picker>
+
+<script>
+  const colorPicker = document.getElementById('labeled-swatches');
+  await customElements.whenDefined("wa-color-picker")
+  await colorPicker.updateComplete
+  colorPicker.swatches = [
+    { color: '#d0021b', label: 'Red' },
+    { color: '#f5a623', label: 'Orange' },
+    { color: '#f8e71c', label: 'Yellow' },
+    { color: '#7ed321', label: 'Green' },
+    { color: '#4a90e2', label: 'Blue' },
+    { color: '#bd10e0', label: 'Purple' },
+    { color: '#000', label: 'Black' },
+    { color: '#fff', label: 'White' },
+  ];
+</script>
+
+
+Placement
+Link to This Section
+
+The preferred placement of the dropdown can be set with the placement attribute. Note that the actual position may vary to ensure the panel remains in the viewport.
+
+<div class="wa-gap-m wa-align-items-baseline">
+  <wa-color-picker placement="top-start" label="Select a color"></wa-color-picker>
+  <wa-color-picker placement="bottom-end" label="Select a color"></wa-color-picker>
+  <wa-color-picker placement="right" label="Select a color"></wa-color-picker>
+  <wa-color-picker placement="left" label="Select a color"></wa-color-picker>
+</div>
+
+
+Sizes
+Link to This Section
+
+Use the size attribute to change the color picker's trigger size.
+
+<div class="wa-gap-m wa-align-items-baseline">
+  <wa-color-picker size="xs" label="Select a color"></wa-color-picker>
+  <wa-color-picker size="s" label="Select a color"></wa-color-picker>
+  <wa-color-picker size="m" label="Select a color"></wa-color-picker>
+  <wa-color-picker size="l" label="Select a color"></wa-color-picker>
+  <wa-color-picker size="xl" label="Select a color"></wa-color-picker>
+</div>
+
+
+Disabled
+Link to This Section
+
+The color picker can be rendered as disabled.
+
+<wa-color-picker disabled label="Select a color"></wa-color-picker>
+
+
+Hint
+Link to This Section
+
+Add descriptive hint to a color picker with the hint attribute. For hints that contain HTML, use the hint slot instead.
+
+<wa-color-picker label="Select a color" hint="Choose a color with appropriate contrast!"></wa-color-picker>
+
+
+Valid slot names for this component (use exactly these — any other slot value
+is silently ignored and the element falls back to the default slot):
+
+•	label — The color picker's form label. Alternatively, you can use the label attribute.
+•	hint — The color picker's form hint. Alternatively, you can use the hint attribute.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

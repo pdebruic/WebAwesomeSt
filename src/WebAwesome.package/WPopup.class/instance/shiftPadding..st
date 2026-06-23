@@ -1,0 +1,7 @@
+attributes
+shiftPadding: attrValue 
+"'The amount of padding, in pixels, to exceed before the shift behavior will occur.
+type: number
+default: 0'"
+
+self attributeAt: #'shift-padding' put: attrValue

@@ -1,0 +1,7 @@
+attributes
+required: attrValue 
+"'Makes the known date required for form submission.
+type: boolean
+default: false'"
+
+self attributeAt: #'required' put: attrValue

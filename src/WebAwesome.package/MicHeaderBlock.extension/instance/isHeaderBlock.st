@@ -1,0 +1,3 @@
+*WebAwesome
+isHeaderBlock
+	^true
